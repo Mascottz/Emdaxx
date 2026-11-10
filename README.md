@@ -1,6 +1,6 @@
-# Emdaxx
+# Emdax
 
-A static multipage website for Emdaxx. Serve the repository root using a static web server.
+A static multipage website for Emdax. Serve the repository root using a static web server.
 
 ## Search and social previews
 
