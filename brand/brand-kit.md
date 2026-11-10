@@ -1,10 +1,10 @@
-# Emdaxx brand kit
+# Emdax brand kit
 
 ## Brand idea
-Good tech. Great hands. Emdaxx brings practical care and clear thinking to the devices people rely on. The visual identity combines the precision of circuitry with an approachable, optimistic voice.
+Good tech. Great hands. Emdax brings practical care and clear thinking to the devices people rely on. The visual identity combines the precision of circuitry with an approachable, optimistic voice.
 
 ## Logo
-The custom E and X circuit monogram is supplied as `emdaxx-symbol.svg`. Pair it with the lowercase Emdaxx wordmark in Manrope ExtraBold, with tight tracking. Give the symbol breathing room equal to at least one quarter of its width. Use the wine symbol on light backgrounds or reverse it to Soft Blush on dark wine. Do not stretch, rotate, add effects, or place it over busy imagery without a clear field.
+The custom E and X circuit monogram is supplied as `emdax-symbol.svg`. Pair it with the lowercase Emdax wordmark in Manrope ExtraBold, with tight tracking. Give the symbol breathing room equal to at least one quarter of its width. Use the wine symbol on light backgrounds or reverse it to Soft Blush on dark wine. Do not stretch, rotate, add effects, or place it over busy imagery without a clear field.
 
 ## Palette
 - Circuit Wine: `#79283C`, primary identity and actions
