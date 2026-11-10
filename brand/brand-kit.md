@@ -1,33 +1,26 @@
 # Emdax brand kit
 
 ## Brand idea
-Good tech. Great hands. Emdax brings practical care and clear thinking to the devices people rely on. The visual identity combines the precision of circuitry with an approachable, optimistic voice.
+Good tech. Great hands. Emdax brings practical care and clear thinking to the devices people rely on.
 
 ## Logo
-The custom E and X circuit monogram is supplied as `emdax-symbol.svg`. Pair it with the lowercase Emdax wordmark in Manrope ExtraBold, with tight tracking. Give the symbol breathing room equal to at least one quarter of its width. Use the wine symbol on light backgrounds or reverse it to Soft Blush on dark wine. Do not stretch, rotate, add effects, or place it over busy imagery without a clear field.
+Use the supplied logo in `assets/emdax-logo.png` on a light background for contrast. Keep its proportions, leave clear space around it, and avoid placing it directly over busy photography. The source logo is a raster image; request a vector original for large print applications.
 
 ## Palette
-- Circuit Wine: `#79283C`, primary identity and actions
-- Deep Ink: `#421622`, text and dark surfaces
-- Soft Blush: `#EAD3C9`, highlights and emphasis
-- Workshop Paper: `#F8F5F0`, primary background
-- Mist: `#F0E3DE`, secondary background
+- Midnight Navy: `#061943`, headings and dark surfaces
+- Electric Blue: `#0872D8`, accents and emphasis
+- Signal Orange: `#FF790B`, buttons and highlights
+- Cloud: `#F5F7FB`, primary background
+- Ice: `#E8F0FA`, secondary background
 
-Use Deep Ink for body text on light surfaces. Reserve Soft Blush for short accents and backgrounds, not small text on white.
+Use navy for readable text on light surfaces. Avoid small orange text on white.
 
 ## Typography
-- Manrope ExtraBold: headlines and wordmark; close tracking and compact line height.
+- Manrope ExtraBold: headlines; close tracking and compact line height.
 - DM Sans Regular, Medium and Bold: body copy, navigation and labels.
-- Labels: uppercase, small, widely tracked. Use sparingly for orientation.
 
 ## Graphic language
-Use the monogram's stepped paths, square terminals, numbered service markers and simple geometric frames. Avoid stock icons, emoji, gradients and decorative effects. Photography should show real tools, devices and hands in a considered workspace. Leave room for typography and avoid staged handshake imagery.
+Draw on the supplied logo's blue and orange. Use clean layouts, practical service illustrations and photography of devices, tools and hands. Avoid busy effects that compete with the logo.
 
 ## Voice
 Knowledgeable without jargon. Warm without being overly casual. Explain the problem, the next step and what the customer can expect. Never promise a repair, price or turnaround time before it has been assessed.
-
-## Example copy
-- Good tech. Great hands.
-- Tech problems meet thoughtful solutions.
-- Good computers deserve a next chapter.
-- Tell us what is going on. We are ready to listen.
