@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow">
+<title>Emdax Admin Dashboard</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=4"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=4"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=13"><link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body class="admin-body">
+<header class="header admin-header">
+  <a href="index.html" class="logo" aria-label="Emdax home"><img src="assets/emdax-logo-gold.png?v=2" alt="Emdax" width="718" height="636"></a>
+  <div class="admin-header-right">
+    <span id="admin-user" class="admin-user"></span>
+    <button id="logout-btn" class="button admin-btn-secondary" type="button" hidden>Log out</button>
+  </div>
+</header>
+
+<main class="admin-main">
+  <!-- Login -->
+  <section id="login-view" class="admin-card admin-login-card">
+    <div class="eyebrow">ADMIN</div>
+    <h1>Dashboard login</h1>
+    <p class="admin-muted">Sign in to manage blog posts and laptop inventory.</p>
+    <form id="login-form" class="form admin-form" novalidate>
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" autocomplete="email" required placeholder="admin@emdax.online">
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" autocomplete="current-password" required placeholder="Password">
+      <button class="button" type="submit" id="login-submit">Sign in <span>↗</span></button>
+      <p id="login-error" class="admin-error" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard-view" hidden>
+    <div class="admin-dashboard-head">
+      <div>
+        <div class="eyebrow">EMDAX DASHBOARD</div>
+        <h1>Manage your site</h1>
+        <p class="admin-muted">Update blog posts and the laptop sale inventory shown on the website.</p>
+      </div>
+    </div>
+
+    <div class="admin-tabs" role="tablist" aria-label="Dashboard sections">
+      <button class="admin-tab active" role="tab" aria-selected="true" aria-controls="tab-blog" id="tabbtn-blog" data-tab="blog">Blog posts</button>
+      <button class="admin-tab" role="tab" aria-selected="false" aria-controls="tab-inventory" id="tabbtn-inventory" data-tab="inventory">Laptop inventory</button>
+    </div>
+
+    <!-- Blog tab -->
+    <div id="tab-blog" class="admin-tabpanel" role="tabpanel" aria-labelledby="tabbtn-blog">
+      <div class="admin-panel-head">
+        <h2>Blog posts</h2>
+        <button class="button" id="new-post-btn" type="button">New post <span>+</span></button>
+      </div>
+      <div id="post-form-wrap" class="admin-card" hidden>
+        <h3 id="post-form-title">New post</h3>
+        <form id="post-form" class="form admin-form admin-form-grid">
+          <input type="hidden" id="post-id">
+          <div class="admin-field">
+            <label for="post-title">Title</label>
+            <input id="post-title" required placeholder="Post title">
+          </div>
+          <div class="admin-field">
+            <label for="post-slug">Slug</label>
+            <input id="post-slug" required placeholder="post-url-slug">
+          </div>
+          <div class="admin-field">
+            <label for="post-category">Category</label>
+            <input id="post-category" required placeholder="DEVICE CARE">
+          </div>
+          <div class="admin-field">
+            <label for="post-cover">Cover image URL (optional)</label>
+            <input id="post-cover" placeholder="assets/my-image.webp or https://...">
+          </div>
+          <div class="admin-field admin-field-full">
+            <label for="post-summary">Summary</label>
+            <textarea id="post-summary" rows="3" required placeholder="Short summary shown on the blog card"></textarea>
+          </div>
+          <div class="admin-field admin-field-full">
+            <label for="post-body">Body (HTML)</label>
+            <textarea id="post-body" rows="14" required placeholder="<p>Write the post body here...</p><h2>Section</h2><p>...</p>"></textarea>
+            <small>Use HTML tags like &lt;p&gt;, &lt;h2&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;strong&gt;. This is rendered on the blog post page.</small>
+          </div>
+          <div class="admin-field admin-field-check">
+            <label><input type="checkbox" id="post-published" checked> Published (visible on website)</label>
+          </div>
+          <div class="admin-field admin-field-full admin-form-actions">
+            <button class="button" type="submit" id="post-save-btn">Save post</button>
+            <button class="button admin-btn-secondary" type="button" id="post-cancel-btn">Cancel</button>
+            <span id="post-form-status" class="admin-status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+      <div id="posts-list" class="admin-list" aria-live="polite"></div>
+    </div>
+
+    <!-- Inventory tab -->
+    <div id="tab-inventory" class="admin-tabpanel" role="tabpanel" aria-labelledby="tabbtn-inventory" hidden>
+      <div class="admin-panel-head">
+        <h2>Laptop inventory</h2>
+        <button class="button" id="new-item-btn" type="button">New listing <span>+</span></button>
+      </div>
+      <div id="item-form-wrap" class="admin-card" hidden>
+        <h3 id="item-form-title">New listing</h3>
+        <form id="item-form" class="form admin-form admin-form-grid">
+          <input type="hidden" id="item-id">
+          <div class="admin-field">
+            <label for="item-name">Name</label>
+            <input id="item-name" required placeholder="Dell Latitude 7400">
+          </div>
+          <div class="admin-field">
+            <label for="item-brand">Brand</label>
+            <input id="item-brand" required placeholder="Dell">
+          </div>
+          <div class="admin-field">
+            <label for="item-condition">Condition</label>
+            <input id="item-condition" required placeholder="UK used">
+          </div>
+          <div class="admin-field">
+            <label for="item-price">Price</label>
+            <input id="item-price" required placeholder="₦295,000">
+          </div>
+          <div class="admin-field">
+            <label for="item-image">Image URL</label>
+            <input id="item-image" placeholder="assets/my-laptop.webp">
+          </div>
+          <div class="admin-field">
+            <label for="item-small-image">Small image URL (optional)</label>
+            <input id="item-small-image" placeholder="assets/my-laptop-small.webp">
+          </div>
+          <div class="admin-field">
+            <label for="item-alt">Image alt text</label>
+            <input id="item-alt" placeholder="Used Dell Latitude 7400 laptop">
+          </div>
+          <div class="admin-field">
+            <label for="item-sort">Sort order</label>
+            <input id="item-sort" type="number" value="0" step="1">
+          </div>
+          <div class="admin-field admin-field-full">
+            <label for="item-specs">Specs (one per line)</label>
+            <textarea id="item-specs" rows="5" placeholder="Intel Core i5, 8th generation&#10;8 GB RAM&#10;256 GB storage"></textarea>
+          </div>
+          <div class="admin-field admin-field-full">
+            <label for="item-whatsapp">WhatsApp enquiry text (optional)</label>
+            <input id="item-whatsapp" placeholder="Hello Emdax, I am interested in...">
+            <small>Leave blank to auto-generate from name and price.</small>
+          </div>
+          <div class="admin-field admin-field-check">
+            <label><input type="checkbox" id="item-published" checked> Published (visible on website)</label>
+          </div>
+          <div class="admin-field admin-field-full admin-form-actions">
+            <button class="button" type="submit" id="item-save-btn">Save listing</button>
+            <button class="button admin-btn-secondary" type="button" id="item-cancel-btn">Cancel</button>
+            <span id="item-form-status" class="admin-status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+      <div id="inventory-list" class="admin-list" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
