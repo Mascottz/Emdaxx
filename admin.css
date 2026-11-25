@@ -1,4 +1,5 @@
 /* Admin dashboard - matches Emdax identity */
+[hidden]{display:none !important}
 .admin-body{background:var(--paper);min-height:100vh}
 .admin-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .admin-header-right{display:flex;align-items:center;gap:12px;margin-left:auto}
