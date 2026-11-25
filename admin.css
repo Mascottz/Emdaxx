@@ -1,0 +1,58 @@
+/* Admin dashboard - matches Emdax identity */
+.admin-body{background:var(--paper);min-height:100vh}
+.admin-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.admin-header-right{display:flex;align-items:center;gap:12px;margin-left:auto}
+.admin-user{font-size:12px;color:#c2cdd9;font-weight:600;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.admin-btn-secondary{background:#3a4a5c;color:#fff}
+.admin-btn-secondary:hover{background:#4b5d72;color:#fff}
+.admin-main{max-width:1180px;margin:0 auto;padding:40px 24px 80px}
+.admin-card{background:#fff;border:1px solid var(--line);padding:28px;border-radius:4px;box-shadow:0 8px 24px rgba(22,32,42,.04)}
+.admin-login-card{max-width:520px;margin:40px auto}
+.admin-login-card h1,.admin-dashboard-head h1{font:800 clamp(32px,4vw,48px)/1.1 Manrope,sans-serif;letter-spacing:-.05em;margin:16px 0 10px}
+.admin-muted{color:var(--muted);line-height:1.7;margin:0 0 24px}
+.admin-error{color:#b3261e;font-size:13px;min-height:20px;margin:12px 0 0}
+.admin-status{font-size:13px;color:var(--muted)}
+.admin-status.ok{color:#1b7f4a}
+.admin-status.err{color:#b3261e}
+.admin-dashboard-head{margin-bottom:28px}
+.admin-tabs{display:flex;gap:8px;margin-bottom:24px;border-bottom:1px solid var(--line);padding-bottom:0}
+.admin-tab{appearance:none;background:transparent;border:0;border-bottom:3px solid transparent;padding:12px 16px;font:700 13px 'DM Sans',sans-serif;color:var(--muted);cursor:pointer;margin-bottom:-1px}
+.admin-tab.active{color:var(--ink);border-bottom-color:var(--lime)}
+.admin-tab:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.admin-panel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.admin-panel-head h2{font:800 28px Manrope,sans-serif;letter-spacing:-.04em;margin:0}
+.admin-form{margin:0}
+.admin-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.admin-field{min-width:0}
+.admin-field-full{grid-column:1/-1}
+.admin-field-check{display:flex;align-items:end;padding-bottom:20px}
+.admin-field-check label{display:flex;gap:10px;align-items:center;margin:0;font-size:13px;font-weight:600}
+.admin-field-check input[type=checkbox]{width:18px;height:18px;margin:0}
+.admin-form-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.admin-form-actions .button{margin:0}
+.admin-list{display:grid;gap:14px;margin-top:20px}
+.admin-item{background:#fff;border:1px solid var(--line);padding:20px;border-radius:4px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
+.admin-item h3{font:700 20px Manrope,sans-serif;letter-spacing:-.03em;margin:0 0 6px}
+.admin-item-meta{font-size:12px;color:var(--muted);line-height:1.6}
+.admin-item-meta span+span:before{content:" · ";color:#98a4b3}
+.admin-badge{display:inline-block;padding:3px 8px;border-radius:2px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;margin-left:8px}
+.admin-badge.pub{background:#e7f5ec;color:#1b7f4a}
+.admin-badge.draft{background:#f3efe2;color:#8a6512}
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.admin-actions button{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 12px;border-radius:3px;font:700 12px 'DM Sans',sans-serif;cursor:pointer}
+.admin-actions button:hover{background:#f5f7fa}
+.admin-actions button.danger{color:#b3261e;border-color:#f0caca}
+.admin-actions button.danger:hover{background:#fff5f5}
+.admin-empty{padding:28px;border:1px dashed #c8d2de;border-radius:4px;color:var(--muted);text-align:center;background:#fbfcfe}
+#post-form-wrap,#item-form-wrap{margin-bottom:20px}
+#post-form-wrap h3,#item-form-wrap h3{font:800 24px Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 20px}
+@media(max-width:800px){
+  .admin-main{padding:28px 16px 60px}
+  .admin-form-grid{grid-template-columns:1fr}
+  .admin-field-full{grid-column:auto}
+  .admin-item{grid-template-columns:1fr}
+  .admin-actions{justify-content:flex-start}
+  .admin-header{flex-wrap:wrap}
+  .admin-header-right{margin-left:0;width:100%;justify-content:space-between}
+  .admin-user{max-width:none}
+}
